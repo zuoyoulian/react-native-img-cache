@@ -2,18 +2,11 @@
   "name": "react-native-img-cache",
   "version": "1.5.3",
   "description": "CachedImage component for React native",
-  "main": "build/index.js",
-  "typings": "build/index.d.ts",
+  "main": "src/index.js",
   "scripts": {
-    "lint": "tslint --project tsconfig.json",
-    "build": "tsc --pretty",
-    "watch": "tsc --watch --pretty",
-    "test": "npm run lint && npm run build",
-    "release": "semantic-release pre && npm publish && semantic-release post"
-  },
-  "files": [
-    "build"
-  ],
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest"
+	},
   "repository": {
     "type": "git",
     "url": "https://github.com/wcandillon/react-native-img-cache.git"
@@ -30,16 +23,14 @@
   },
   "homepage": "https://github.com/wcandillon/react-native-img-cache#readme",
   "devDependencies": {
-    "@types/react": "^16.0.5",
-    "@types/react-native": "^0.49.2",
-    "condition-circle": "^1.5.0",
-    "semantic-release": "^6.3.2",
-    "ts-npm-lint": "^0.1.0",
-    "tslint": "^4.4.2",
-    "typescript": "^2.1.6"
-  },
+		"babel-jest": "20.0.3",
+		"babel-preset-react-native": "1.9.2",
+		"jest": "20.0.4",
+		"react-test-renderer": "16.0.0-alpha.12",
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.47.0"
+	},
   "dependencies": {
-    "crypto-js": "^3.1.9-1"
   },
   "release": {
     "verifyConditions": "condition-circle"
