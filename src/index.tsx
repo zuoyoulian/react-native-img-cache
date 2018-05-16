@@ -26,7 +26,8 @@ export class ImageCache {
     private getPath(uri: string, immutable?: boolean): string {
         let path = uri.substring(uri.lastIndexOf("/"));
         path = path.indexOf("?") === -1 ? path : path.substring(path.lastIndexOf("."), path.indexOf("?"));
-        const ext = path.indexOf(".") === -1 ? ".jpg" : path.substring(path.indexOf("."));
+        // const ext = path.indexOf(".") === -1 ? ".jpg" : path.substring(path.indexOf("."));
+        const ext = ".jpg";
         if (immutable === true) {
             return BASE_DIR + "/" + SHA1(uri) + ext;
         } else {
